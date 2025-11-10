@@ -10,7 +10,7 @@ async function fetchAllPages(initialUrl) {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
-                    'api-key': 'YOUR_DEV_API_KEY'
+                    'api-key': 'DEVTO_API_KEY'
                 },
             });
             
@@ -64,3 +64,5 @@ async function countFollowers() {
 }
 var totalFollowers = countFollowers();
 console.log(`Total followers outside function: ${totalFollowers}`);
+
+document.getElementById("followers").innerText = totalFollowers;
